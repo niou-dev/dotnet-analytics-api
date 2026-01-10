@@ -21,7 +21,7 @@ public class AuthService : IAuthService
     public async Task<SignupResponse> SignUp(SignUpRequest signUpRequest)
     {
         var result = await _usersRepository.GetUserByUsernameAsync(signUpRequest.Username);
-        if (!(result == null))
+        if (result != null)
         {
             
             throw new InvalidOperationException("Username already exists");
