@@ -76,7 +76,7 @@ public class AuthService : IAuthService
         {
             
             Jwt = _jwtService.GenerateToken(user, customClaims),
-            UserResponse = new UserResponse() { Id = user.Id, Username = user.Username,  Email = user.Email }
+            UserResponse = new UserResponse() { Id = user.Id, Username = user.Username,  Email = user.Email}
         };
     }
 }
