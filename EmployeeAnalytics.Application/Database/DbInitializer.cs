@@ -40,7 +40,7 @@ public class DbInitializer
             create table if not exists raw_metrics(
                 id UUID primary key,
                 upload_id UUID not null,
-                external_employee_id TEXT,
+                employee_id TEXT,
                 employee_name TEXT,
                 department TEXT not null,
                 tasks_completed INTEGER not null,
