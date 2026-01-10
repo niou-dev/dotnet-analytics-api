@@ -14,7 +14,7 @@ public class AuthController : ControllerBase
         _authService = authService;
     }
 
-    [HttpPost("/api/auth/login")]
+    [HttpPost("/api/v1/auth/login")]
     public async Task<IActionResult> Login([FromBody]LoginRequest loginRequest)
     {
         if (!ModelState.IsValid)
@@ -33,7 +33,7 @@ public class AuthController : ControllerBase
         }
     }
 
-    [HttpPost("/api/auth/signup")]
+    [HttpPost("/api/v1/auth/signup")]
     public async Task<IActionResult> SignUp([FromBody] SignUpRequest signUpRequest)
     {
         try

@@ -58,7 +58,7 @@ public class UploadController : ControllerBase
         return Ok(userUploads);
     }
 
-    [HttpGet("my-metrics")]
+    [HttpGet("my-upload-metrics")]
     public async Task<IActionResult> GetMySpecificUploadRawMetric([FromQuery]Guid uploadId, CancellationToken token)
     {
         var userId = Guid.Parse(User.FindFirst("userid")!.Value);
